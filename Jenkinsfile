@@ -33,7 +33,6 @@ stages{
 
                 stage ("Deploy to Production"){
                     steps {
-                        scp your_username@remotehost.edu:foobar.txt /some/local/directory
                         sh "scp -i /var/lib/jenkins/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat8/webapps"
                     }
                 }
